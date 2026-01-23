@@ -1,6 +1,6 @@
 {
   "name": "zikofy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "exports" : {
     "./*" : {
@@ -13,7 +13,8 @@
     "zikojs",
     "react",
     "preact",
-    "solid"
+    "solid",
+    "svelte"
   ],
   "homepage": "https://github.com/zakarialaoui10/zikofy#readme",
   "bugs": {
