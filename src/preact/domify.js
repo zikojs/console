@@ -6,5 +6,6 @@ export function domify(Component, props) {
         h(Component, props), 
         container
     )
-    return container.firstChild
+    if(container.children.length === 1) return container.firstChild;
+    return [...container.children];
 }
