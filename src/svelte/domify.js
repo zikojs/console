@@ -4,6 +4,7 @@ export function domify(Component, props = {}) {
 
   mount(Component, {
     target: container,
+    props
   })
 
   if (container.children.length === 1) return container.firstChild;

@@ -3,10 +3,7 @@ import './app.css'
 import App from './App.svelte'
 import { zikofy } from 'zikofy/svelte'
 
-globalThis.app = zikofy(App)
+globalThis.app = zikofy(App, {start : 15})
+app.mount(document.getElementById('app'))
 
-// const app = mount(App, {
-//   target: document.getElementById('app'),
-// })
 
-// export default app

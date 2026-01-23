@@ -3,8 +3,8 @@ import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = createSignal(0)
+function App({name = "ziko", start = 10} = {}) {
+  const [count, setCount] = createSignal(start)
 
   return (
     <>
@@ -16,7 +16,7 @@ function App() {
           <img src={solidLogo} class="logo solid" alt="Solid logo" />
         </a>
       </div>
-      <h1>Vite + Solid</h1>
+      <h1>Vite + Solid + {name}</h1>
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count()}

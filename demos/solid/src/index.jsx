@@ -7,5 +7,8 @@ import { domify, zikofy } from 'zikofy/solid'
 globalThis.app = zikofy(App)
 
 const root = document.getElementById('root')
-globalThis.root = root
-// render(() => <App />, root)
+globalThis.app = zikofy(App, { name : 'zikkkos'})
+app.forEach(
+    el => el.mount(root)
+)
+

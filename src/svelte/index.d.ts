@@ -1,12 +1,11 @@
-import { JSX } from "solid-js";
 import { UIElement } from "ziko/ui";
 
-export declare function domify<P = {}>(
-  Component: ((props: P) => JSX.Element) | JSX.Element,
+export declare function domify(
+  Component: any,
   props?: P
-): HTMLElement | null;
+): HTMLElement | HTMLElement[];
 
-export declare function zikofy<P = {}>(
-  Component: ((props: P) => JSX.Element) | JSX.Element,
+export declare function zikofy(
+  Component: any,
   props?: P
-): UIElement;
+): UIElement | UIElement[];

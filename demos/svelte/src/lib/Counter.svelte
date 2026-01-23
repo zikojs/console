@@ -1,5 +1,6 @@
 <script>
-  let count = $state(0)
+  let {start} = $props();
+  let count = $state(start)
   const increment = () => {
     count += 1
   }
