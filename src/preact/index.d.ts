@@ -1,4 +1,5 @@
-import { ComponentType, JSX } from 'preact';
+import type { ComponentType, JSX } from 'preact';
+import type { UIElement } from 'ziko/ui';
 
 export declare function domify<P = {}>(
   Component: ComponentType<P> | JSX.Element,

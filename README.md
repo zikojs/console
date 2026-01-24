@@ -21,10 +21,10 @@ const ZikoComponent = zikofy(ForeignComponent, props)
 
 ## Current Supports
 
-|Library|Mount|Props|
-|-|-|-|
+|Library|Mount|Props|Demo|
+|-|-|-|-|
 |react|✅||
-|preact|✅||
+|preact|✅|✅|
 |solid|✅|✅|
 |svelte|✅|✅|
 |vue|✅||
