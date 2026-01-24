@@ -24,7 +24,7 @@ const ZikoComponent = zikofy(ForeignComponent, props)
 |Library|Mount|Props|Demo|
 |-|-|-|-|
 |react|✅||
-|preact|✅|✅|
+|preact|✅|✅|[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/zakarialaoui10-zikofy-auvvkrmq?file=src%2Fmain.jsx)
 |solid|✅|✅|
 |svelte|✅|✅|
 |vue|✅||
