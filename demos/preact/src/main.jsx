@@ -1,10 +1,10 @@
 import './index.css'
 import { App } from './app.jsx'
-
 import { zikofy } from 'zikofy/preact';
 import { tags } from 'ziko/ui';
 
 const ZIKOJS_LOGO_URL = 'https://raw.githubusercontent.com/zakarialaoui10/zikojs/9339509291a848fa30fdea42e9cc0d6f84828bdb/docs/src/assets/logo-200.svg'
+ 
 const app = zikofy(App, { start : 5, step : 2});
 
 app.forEach(el => el.mount(document.getElementById('app')))
