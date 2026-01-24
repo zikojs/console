@@ -11,7 +11,8 @@
   "dependencies": {
     "preact": "^10.27.2",
     "zextra": "^0.9.4",
-    "ziko": "^0.57.1"
+    "ziko": "^0.57.1",
+    "zikofy": "^0.5.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
