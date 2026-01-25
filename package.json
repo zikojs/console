@@ -34,5 +34,8 @@
   },
   "dependencies": {
     "ziko": "^0.57.1"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
   }
 }
