@@ -1,5 +1,5 @@
 import { Component, VNode } from "vue";
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 
 export declare function domify<P = {}>(
   Component: Component | ((props: P) => VNode),

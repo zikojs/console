@@ -1,4 +1,4 @@
-import { UIElement } from 'ziko/ui';
+import { UIElement } from 'ziko/dom';
 import { domify } from './domify.js';
 
 export function zikofy(Component, props) {
