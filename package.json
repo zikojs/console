@@ -1,6 +1,6 @@
 {
   "name": "zikofy",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "",
   "exports": {
     "./*": {
@@ -33,7 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "ziko": "^0.57.1"
+    "ziko": "^1.1.0"
   },
   "peerDependencies": {
     "preact": "^10.28.2"
