@@ -4,6 +4,7 @@ packages:
 
 allowBuilds:
   esbuild: false
+  preact: false
   workerd: false
 
 # Define a catalog of version ranges.

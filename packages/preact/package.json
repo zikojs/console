@@ -28,9 +28,7 @@
     "directory": "packages/preact"
   },
   "dependencies": {
-    "ziko": "catalog:"
-  },
-  "peerDependencies": {
+    "ziko": "catalog:",
     "preact": "^10.29.8"
   }
 }
