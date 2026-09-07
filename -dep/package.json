@@ -1,0 +1,41 @@
+{
+  "name": "zikofy",
+  "version": "0.7.3",
+  "description": "",
+  "exports": {
+    "./*": {
+      "import": "./src/*/index.js",
+      "types": "./src/*/index.d.ts"
+    }
+  },
+  "keywords": [
+    "ziko",
+    "zikojs",
+    "react",
+    "preact",
+    "solid",
+    "svelte",
+    "vue"
+  ],
+  "homepage": "https://github.com/zakarialaoui10/zikofy#readme",
+  "bugs": {
+    "url": "https://github.com/zakarialaoui10/zikofy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakarialaoui10/zikofy.git"
+  },
+  "license": "MIT",
+  "author": "zakaria elalaoui",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ziko": "^1.1.0"
+  },
+  "peerDependencies": {
+    "preact": "^10.28.2"
+  }
+}

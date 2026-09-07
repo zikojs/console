@@ -1,0 +1,36 @@
+{
+  "name": "@zikojs/preact",
+  "version": "0.2.0",
+  "description": "Use Zikojs components within Preact",
+  "keywords": [
+    "zikojs",
+    "ziko",
+    "preact"
+  ],
+  "license": "MIT",
+  "author": "zakaria elalaoui",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports":{
+    "." : {
+      "import" : "./src/index.js",
+      "types" : "./src/index.d.ts"
+     }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikojs/integrations.git",
+    "directory": "packages/preact"
+  },
+  "dependencies": {
+    "ziko": "catalog:"
+  },
+  "peerDependencies": {
+    "preact": "^10.29.8"
+  }
+}
