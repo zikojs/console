@@ -23,13 +23,7 @@ body {
   }
 }
 
-button:focus-visible,
-input:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 1px;
-}
-
-/* ---------- Console component ---------- */
+/* ---------- Console feed ---------- */
 .cf {
   --bg: #171b24;
   --bar: #1e2330;
@@ -73,49 +67,7 @@ input:focus-visible {
   --err-fg: #b3261e;
   --hover: #f3f5f9;
 }
-.cf-bar {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  padding: 6px 8px;
-  background: var(--bar);
-  border-bottom: 1px solid var(--line);
-  flex-wrap: wrap;
-}
-.cf-bar input {
-  flex: 1;
-  min-width: 120px;
-  font: inherit;
-  background: var(--bg);
-  color: var(--fg);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 3px 8px;
-}
-.cf-bar button {
-  font: inherit;
-  background: none;
-  color: var(--dim);
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 2px 8px;
-  cursor: pointer;
-}
-.cf-bar button:hover {
-  color: var(--fg);
-  border-color: var(--line);
-}
-.cf-bar button.cf-chip.on {
-  color: var(--fg);
-  border-color: var(--line);
-  background: var(--bg);
-}
-.cf-chip.warn.on {
-  color: var(--warn-fg) !important;
-}
-.cf-chip.error.on {
-  color: var(--err-fg) !important;
-}
+
 .cf-body {
   flex: 1;
   overflow: auto;
@@ -242,23 +194,4 @@ input:focus-visible {
 .cf-table th {
   background: var(--bar);
   font-weight: 600;
-}
-.cf-prompt {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 10px;
-  border-top: 1px solid var(--line);
-  background: var(--bar);
-}
-.cf-prompt span {
-  color: var(--key);
-}
-.cf-prompt input {
-  flex: 1;
-  font: inherit;
-  background: none;
-  border: 0;
-  color: var(--fg);
-  outline: 0;
 }

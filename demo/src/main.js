@@ -34,7 +34,7 @@ ConsoleFeed(
     { id: 1, name: "Ada" },
     { id: 2, name: "Linus" },
   ]),
-).mount(document.body),
+).mount(document.body)
 
 
 // 2) Standalone
@@ -55,3 +55,5 @@ globalThis.c = ConsoleFeed({ feed, variant: 'light', repl : true });
 c.mount(document.body)
 
 console.log("Hello from VanJS", 42, true, null, undefined);
+
+globalThis.a = 100
