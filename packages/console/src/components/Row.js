@@ -1,64 +1,41 @@
 import van from "https://cdn.jsdelivr.net/npm/vanjs-core@1.5.3/src/van.js";
-
-import {
-  fmt,
-  isObj
-} from "../utils/index.js";
-
-import { Inspect } from "./Inspect.js";
-import { Table } from "./Table.js";
-
 const { div, span } = van.tags;
+import { fmt, isObj } from "../utils/index.js";
+import { Inspect, Table } from "./index.js";
 
 const cache = new WeakMap();
 
-const buildRow = entry => {
-  const [a0, ...rest] = entry.args;
-
+const buildRow = (e) => {
+  const [a0, ...rest] = e.args;
   const items =
-    entry.method === "table" && isObj(a0)
-      ? [
-          Table(a0),
-          ...rest.map(x =>
-            Inspect(x, undefined, [], true).element
-          )
-        ]
-      : fmt(entry.args).map(a =>
-          Inspect(a, undefined, [], true).element
-        );
+    e.method === "table" && isObj(a0)
+      ? [Table(a0), rest.map((x) => Inspect(x, undefined, [], true)).element]
+      : fmt(e.args).map((a) => Inspect(a, undefined, [], true).element);
+
+  const badgeSpan = span({ class: "cf-badge" }, () => (e.count > 1 ? e.count : ""));
+  const updateBadge = () => {
+    badgeSpan.textContent = e.count > 1 ? e.count : "";
+    badgeSpan.style.display = e.count > 1 ? "inline-block" : "none";
+  };
+  badgeSpan.updateBadge = updateBadge;
+  updateBadge();
 
   return div(
-    {
-      class: `cf-row ${entry.method}`,
-      style: `--d:${entry.depth}`
-    },
-
-    () =>
-      entry.count.val > 1
-        ? span(
-            { class: "cf-badge" },
-            entry.count.val
-          )
-        : "",
-
+    { class: `cf-row ${e.method}`, style: `--d:${e.depth}` },
+    badgeSpan,
     span(
       { class: "cf-time" },
-      entry.time.toLocaleTimeString([], {
-        hour12: false
-      })
+      e.time.toLocaleTimeString([], { hour12: false }),
     ),
-
-    div(
-      { class: "cf-msg" },
-      items
-    )
+    div({ class: "cf-msg" }, items),
   );
 };
 
-export const Row = entry =>
-  cache.get(entry) ||
-  (() => {
-    const node = buildRow(entry);
-    cache.set(entry, node);
-    return node;
-  })();
+export const Row = (e) => {
+  if (cache.has(e)) return cache.get(e);
+  const n = buildRow(e);
+  cache.set(e, n);
+  return n;
+};
+
+export { cache };
