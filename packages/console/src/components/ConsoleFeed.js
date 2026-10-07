@@ -1,5 +1,6 @@
-import van from "https://cdn.jsdelivr.net/npm/vanjs-core@1.5.3/src/van.js";
-const { div } = van.tags;
+import { tags } from 'ziko/dom'
+
+const { div } = tags;
 
 import { isProps } from "../utils/index.js";
 import { Hook } from "../hook/index.js";
@@ -33,11 +34,13 @@ export function ConsoleFeed(...args) {
   const prompt = repl ? ConsolePrompt(feed) : "";
 
   const container = div(
-    { class: () => "cf " + feed.theme, style: "flex:1" },
+    { class: "cf " + feed.theme },
     bar,
     body,
     prompt,
-  );
+  ).style({
+    flex : 1
+  });
 
   feed.addEventListener("theme-change", (e) => {
     container.className = "cf " + e.detail + " flex:1";

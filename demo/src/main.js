@@ -5,33 +5,37 @@ import {
     Console
 } from '@zikojs/console'
 
+import { useState } from 'ziko/hooks'
+
 // Object.assign(window, {
 //   ConsoleFeed: { Hook, createFeed, ConsoleFeed, Console },
 // });
 
+const [theme, setTheme] = useState('light')
+
 
 Console.theme = 'light';
+globalThis.Console = Console
 
 // 1) Declarative
 document.body.append(
   document.createComment('Declarative')
 )
-document.body.append(
-  ConsoleFeed(
-    { variant: 'light', repl: false },
-    Console.log("Hello from VanJS", 42, true, null, undefined),
-    Console.info("Server listening on :3000"),
-    Console.group("Request"),
-    Console.log("parsing"),
-    Console.warn("token expires soon"),
-    Console.groupEnd(),
-    Console.error(new Error("Something broke")),
-    Console.table([
-      { id: 1, name: "Ada" },
-      { id: 2, name: "Linus" },
-    ]),
-  ),
-);
+ConsoleFeed(
+  { variant: 'light', repl: false },
+  Console.log("Hello from VanJS", 42, true, null, undefined),
+  Console.info("Server listening on :3000"),
+  Console.group("Request"),
+  Console.log("parsing"),
+  Console.warn("token expires soon"),
+  Console.groupEnd(),
+  Console.error(new Error("Something broke")),
+  Console.table([
+    { id: 1, name: "Ada" },
+    { id: 2, name: "Linus" },
+  ]),
+).mount(document.body),
+
 
 // 2) Standalone
 document.body.append(
@@ -47,7 +51,7 @@ document.body.append(
 )
 const feed = createFeed();
 Hook(console, (e) => feed.push(e));
-globalThis.c = ConsoleFeed({ feed, variant: 'light' });
-document.body.append(c);
+globalThis.c = ConsoleFeed({ feed, variant: 'light', repl : true });
+c.mount(document.body)
 
 console.log("Hello from VanJS", 42, true, null, undefined);

@@ -1,5 +1,6 @@
-import van from "https://cdn.jsdelivr.net/npm/vanjs-core@1.5.3/src/van.js";
-const { div, span, input } = van.tags;
+import { tags } from "ziko/dom";
+// import van from "https://cdn.jsdelivr.net/npm/vanjs-core@1.5.3/src/van.js";
+const { div, span, input } = tags;
 
 export function ConsolePrompt(feed) {
   const hist = [];
@@ -22,7 +23,8 @@ export function ConsolePrompt(feed) {
       "aria-label": "Run JavaScript",
       spellcheck: false,
       autocomplete: "off",
-      onkeydown: (e) => {
+      onKeyDown: (ev) => {
+        const e = ev.event
         const el = e.target;
         if (e.key === "Enter" && el.value.trim()) {
           hist.push(el.value);
