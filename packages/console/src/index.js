@@ -11,13 +11,15 @@ Object.assign(window, {
    Demo
    ===================================================================== */
 
-const theme = { val: "light" };
-Console.theme = theme;
+Console.theme = 'light';
 
 // 1) Declarative
 document.body.append(
+  document.createComment('Declarative')
+)
+document.body.append(
   ConsoleFeed(
-    { variant: theme.val, repl: false },
+    { variant: 'light', repl: false },
     Console.log("Hello from VanJS", 42, true, null, undefined),
     Console.info("Server listening on :3000"),
     Console.group("Request"),
@@ -33,14 +35,20 @@ document.body.append(
 );
 
 // 2) Standalone
+document.body.append(
+  document.createComment('Standalone')
+)
 document.body.append(Console.log("Just one line", { a: 1, b: 1 }));
 document.body.append(Console.warn("Standalone warning"));
 document.body.append(Console.table([1, 2, 3]));
 
 // 3) Live
+document.body.append(
+  document.createComment('Live')
+)
 const feed = createFeed();
 Hook(console, (e) => feed.push(e));
-globalThis.c = ConsoleFeed({ feed, variant: theme.val });
+globalThis.c = ConsoleFeed({ feed, variant: 'light' });
 document.body.append(c);
 
 console.log("Hello from VanJS", 42, true, null, undefined);

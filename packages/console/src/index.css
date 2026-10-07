@@ -15,60 +15,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-header {
-  padding: 14px 20px 4px;
-}
-header h1 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 650;
-}
-header p {
-  margin: 2px 0 0;
-  color: #5c6578;
-  font-size: 13px;
-}
-main {
-  flex: 1;
-  min-height: 0;
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 14px;
-  padding: 12px 20px 20px;
-}
+
 @media (max-width: 720px) {
   main {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
 }
-aside {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 6px;
-}
-aside h2 {
-  width: 100%;
-  margin: 6px 0 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: #5c6578;
-}
-aside button {
-  font: inherit;
-  font-size: 13px;
-  padding: 5px 10px;
-  border: 1px solid #c9cedb;
-  background: #f6f7fa;
-  color: inherit;
-  border-radius: 5px;
-  cursor: pointer;
-}
-aside button:hover {
-  background: #fff;
-  border-color: #8a93a8;
-}
+
 button:focus-visible,
 input:focus-visible {
   outline: 2px solid #3b82f6;
