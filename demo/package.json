@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ziko": "catalog:",
+    "@zikojs/console" : "workspace:*"
   },
   "devDependencies": {
     "vite": "catalog:"
