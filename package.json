@@ -1,5 +1,5 @@
 {
-  "name": "@zikojs/preact-root",
+  "name": "@zikojs/console-root",
   "version": "1.0.0",
   "description": "",
   "private": "true",
@@ -9,9 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-
   "type": "module",
   "dependencies": {
-    "ziko": "2.0.0-beta.8"
+    "ziko": "2.0.0-beta.16.2"
   }
 }
