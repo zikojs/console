@@ -4,7 +4,8 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:demos/ziko": "pnpm --dir demos/ziko dev",
+    "dev:demos/preact": "pnpm --dir demos/preact dev"
   },
   "keywords": [],
   "author": "",
