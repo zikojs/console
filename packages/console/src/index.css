@@ -25,6 +25,7 @@ body {
 
 /* ---------- Console feed ---------- */
 .cf {
+  color-scheme: light dark;
   --bg: #171b24;
   --bar: #1e2330;
   --line: #2b3244;
@@ -51,6 +52,7 @@ body {
   overflow: hidden;
 }
 .cf.light {
+  color-scheme: light;
   --bg: #fbfbfd;
   --bar: #f0f2f6;
   --line: #dfe3ea;
@@ -66,6 +68,29 @@ body {
   --err-bg: #ffeceb;
   --err-fg: #b3261e;
   --hover: #f3f5f9;
+}
+.cf.dark {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  .cf:not(.dark) {
+    --bg: #fbfbfd;
+    --bar: #f0f2f6;
+    --line: #dfe3ea;
+    --fg: #252b37;
+    --dim: #7a8396;
+    --str: #b4531c;
+    --num: #1d5fd1;
+    --bool: #7a3fc4;
+    --nul: #7a8396;
+    --key: #0b7a6c;
+    --warn-bg: #fff6da;
+    --warn-fg: #7a5a00;
+    --err-bg: #ffeceb;
+    --err-fg: #b3261e;
+    --hover: #f3f5f9;
+  }
 }
 
 .cf-body {

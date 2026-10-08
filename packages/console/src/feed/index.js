@@ -9,7 +9,7 @@ export class ConsoleStore extends EventTarget {
     this.id = 0;
     this.levels = Object.fromEntries(LEVELS.map((l) => [l, true]));
     this.query = "";
-    this.theme = "dark";
+    this.theme = "auto";
     this.cache = cacheRef;
   }
 

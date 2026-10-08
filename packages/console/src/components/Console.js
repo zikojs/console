@@ -16,7 +16,7 @@ const entryNode =
   };
 
 export const Console = {
-  theme: { val: "dark" },
+  theme: "auto",
   log: entryNode("log"),
   info: entryNode("info"),
   debug: entryNode("debug"),
