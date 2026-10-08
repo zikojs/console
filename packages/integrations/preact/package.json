@@ -1,8 +1,13 @@
 {
   "name": "@zikojs/preact-console",
-  "version": "0.2.0",
-  "description": "",
+  "version": "0.3.1",
+  "description": "Console components for Preact applications.",
+  "type": "module",
   "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -18,11 +23,11 @@
     "zikojs",
     "console",
     "log",
-    "dev-tools"
+    "dev-tools",
+    "preact"
   ],
   "author": "zakaria elalaoui",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@zikojs/console": "workspace:*",
     "@zikojs/preact": "^0.3.0",

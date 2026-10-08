@@ -39,6 +39,11 @@ export const Console = {
       {children}
     </PreactConsole>
   ),
+  error: ({ children }) => (
+    <PreactConsole methode="error">
+      {children}
+    </PreactConsole>
+  ),
   table: ({ children }) => (
     <PreactConsole methode="table">
       {children}
