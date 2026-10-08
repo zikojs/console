@@ -8,7 +8,7 @@ const entryNode =
   (...args) => {
     const e = makeEntry(method, args);
     const node = div(
-      { class: () => "cf cf-solo " + Console.theme }, // <-- using a function or string
+      { class: "cf cf-solo" },
       Row(e),
     );
     nodeEntry.set(node, e);
@@ -16,7 +16,6 @@ const entryNode =
   };
 
 export const Console = {
-  theme: "auto",
   log: entryNode("log"),
   info: entryNode("info"),
   debug: entryNode("debug"),

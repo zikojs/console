@@ -5,14 +5,11 @@ const { div } = van.tags
 
 export const nodeEntry = new WeakMap();
 
-export const entryNode = (method, theme) => (...args) => {
+export const entryNode = (method) => (...args) => {
   const entry = createEntry(method, args);
 
   const node = div(
-    {
-      class: () =>
-        "cf cf-solo " + theme.val
-    },
+    { class: "cf cf-solo" },
     Row(entry)
   );
 

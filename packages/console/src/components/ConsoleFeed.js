@@ -12,10 +12,7 @@ import { ConsoleBody } from "./ConsoleBody.js";
 export function ConsoleFeed(...args) {
   const [props, ...kids] = isProps(args[0]) ? args : [{}, ...args];
   const feed = props.feed || createFeed(1000, cache);
-  const {
-    variant = "auto",
-    hook = false,
-  } = props;
+  const { hook = false } = props;
 
   if (hook) Hook(console, (e) => feed.push(e));
   kids.flat(Infinity).forEach((c) => {
@@ -23,22 +20,15 @@ export function ConsoleFeed(...args) {
     if (e) feed.push(e);
   });
 
-  const initialTheme = typeof variant === "string" ? variant : (variant.val || "auto");
-  feed.setTheme(initialTheme);
-
   const body = ConsoleBody(feed);
 
   const container = div(
-    { class: "cf " + feed.theme },
+    { class: "cf" },
     // bar,
     body,
     // prompt,
   ).style({
     flex : 1
-  });
-
-  feed.addEventListener("theme-change", (e) => {
-    container.className = "cf " + e.detail;
   });
 
   return container;

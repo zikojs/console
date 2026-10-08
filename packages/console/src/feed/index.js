@@ -9,13 +9,7 @@ export class ConsoleStore extends EventTarget {
     this.id = 0;
     this.levels = Object.fromEntries(LEVELS.map((l) => [l, true]));
     this.query = "";
-    this.theme = "auto";
     this.cache = cacheRef;
-  }
-
-  setTheme(theme) {
-    this.theme = theme;
-    this.dispatchEvent(new CustomEvent("theme-change", { detail: theme }));
   }
 
   toggleLevel(level) {
