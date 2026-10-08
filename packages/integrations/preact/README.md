@@ -2,6 +2,8 @@
 
 A console-like UI component for **Preact** that renders JavaScript console output directly inside your application.
 
+!['Preact console'](../../../assets/preact-console.png)
+
 `@zikojs/preact-console` provides JSX components that mimic common browser console methods such as `console.log()`, `console.warn()`, and `console.table()` while rendering the output as part of the Preact UI.
 
 ## ✨ Features
