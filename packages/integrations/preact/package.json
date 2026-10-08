@@ -24,7 +24,8 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@zikojs/preact": "^0.2.0",
+    "@zikojs/console": "workspace:*",
+    "@zikojs/preact": "^0.3.0",
     "ziko": "catalog:"
   }
 }

@@ -58,9 +58,12 @@ importers:
 
   packages/integrations/preact:
     dependencies:
+      '@zikojs/console':
+        specifier: workspace:*
+        version: link:../../console
       '@zikojs/preact':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.0
+        version: 0.3.0(preact@10.29.8)
       ziko:
         specifier: 'catalog:'
         version: 2.0.0-beta.16.2
@@ -319,8 +322,10 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
-  '@zikojs/preact@0.2.0':
-    resolution: {integrity: sha512-dhRG+Q0kMddM7zQnWrpluLkVEfWlceDD2TDnY3jijn+LllxPUsEFD7CSseEQOC/XCix837FUNERpqglzsGS6zw==}
+  '@zikojs/preact@0.3.0':
+    resolution: {integrity: sha512-21lRddbIygqGSQBf4oV9iMBKlBpBMZvQGVLJDocZA2Ll8v4yCyTO0qgj16d5QSqiDHOAIzS4cJate36K4lSzMg==}
+    peerDependencies:
+      preact: ^10.29.8
 
   babel-plugin-transform-hook-names@1.0.2:
     resolution: {integrity: sha512-5gafyjyyBTTdX/tQQ0hRgu4AhNHG/hqWi0ZZmg2xvs2FgRkJXzDNKBZCyoYqgFkovfDrgM8OoKg8karoUvWeCw==}
@@ -896,12 +901,10 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
-  '@zikojs/preact@0.2.0':
+  '@zikojs/preact@0.3.0(preact@10.29.8)':
     dependencies:
       preact: 10.29.8
       ziko: 2.0.0-beta.16.2
-    transitivePeerDependencies:
-      - preact-render-to-string
 
   babel-plugin-transform-hook-names@1.0.2(@babel/core@7.29.7):
     dependencies:
