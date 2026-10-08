@@ -1,0 +1,30 @@
+{
+  "name": "@zikojs/preact-console",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikojs/console.git",
+    "directory": "packages/integrations/preact"
+  },
+  "keywords": [
+    "zikojs",
+    "console",
+    "log",
+    "dev-tools"
+  ],
+  "author": "zakaria elalaoui",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@zikojs/preact": "^0.2.0",
+    "ziko": "catalog:"
+  }
+}
