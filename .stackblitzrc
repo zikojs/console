@@ -1,0 +1,5 @@
+
+{
+  "installDependencies": false,
+  "startCommand": "npm install -g @pnpm/wasm && npm_config_manage_package_manager_versions=false pnpm install && pnpm --dir demos/ziko dev -- --host 0.0.0.0"
+}
