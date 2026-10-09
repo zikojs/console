@@ -1,0 +1,27 @@
+
+{
+  "setupTasks": [
+    {
+      "name": "Install dependencies",
+      "command": "pnpm install --frozen-lockfile"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "ZikoJS demo",
+      "command": "pnpm --dir demos/ziko dev -- --host 0.0.0.0",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
+    },
+    {
+      "name": "Preact demo",
+      "command": "pnpm --dir demos/preact dev -- --host 0.0.0.0 --port 5174",
+      "runAtStart": false,
+      "preview": {
+        "port": 5174
+      }
+    }
+  ]
+}
