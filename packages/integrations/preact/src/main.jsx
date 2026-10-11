@@ -1,5 +1,5 @@
 import { ZikoWrapper } from '@zikojs/preact'
-import { Console as _Console } from '@zikojs/console'
+import { Console as _Console } from '@zikojs/console/no-css'
 
 const ZikoConsole = ({ methode = 'log', children = [] } = {}) =>
     _Console[methode](children)

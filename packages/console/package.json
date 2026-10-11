@@ -1,13 +1,27 @@
 {
   "name": "@zikojs/console",
-  "version": "0.6.0",
-  "description": "",
+  "version": "0.7.0",
+  "description": "Declarative Console components for Zikojs applications.",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts" 
+    },
+    "./no-css": {
+      "import": "./src/main.js",
+      "types": "./src/index.d.ts" 
+    },
+    "./style": {
+      "import": "./src/index.css"
+    }
   },
   "repository": {
     "type": "git",

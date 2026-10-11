@@ -1,6 +1,6 @@
 {
   "name": "@zikojs/preact-console",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Console components for Preact applications.",
   "type": "module",
   "main": "src/index.js",
@@ -13,6 +13,19 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts" 
+    },
+    "./no-css": {
+      "import": "./src/main.js",
+      "types": "./src/index.d.ts" 
+    },
+    "./style": {
+      "import": "./src/index.css"
+    }
   },
   "repository": {
     "type": "git",

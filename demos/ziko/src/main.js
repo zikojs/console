@@ -5,8 +5,8 @@ import {
 import { tags } from 'ziko/dom'
 
 tags.section(
-  Console.log('Hello world'),
-  Console.log({ a : 1, b: 2}),
+  Console.log('Hello world', 'llll'),
+  Console.log('kkk', { a : 1, b: 2}),
   Console.table(
     [
     {
