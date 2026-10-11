@@ -23,9 +23,9 @@ importers:
 
   demos/astro:
     dependencies:
-      '@zikojs/console':
+      '@zikojs/astro-console':
         specifier: workspace:*
-        version: link:../../packages/console
+        version: link:../../packages/integrations/astro
       astro:
         specifier: ^7.3.8
         version: 7.3.8(yaml@2.9.1)
@@ -61,6 +61,15 @@ importers:
 
   packages/console:
     dependencies:
+      ziko:
+        specifier: 'catalog:'
+        version: 2.0.0-beta.17.1
+
+  packages/integrations/astro:
+    dependencies:
+      '@zikojs/console':
+        specifier: workspace:*
+        version: link:../../console
       ziko:
         specifier: 'catalog:'
         version: 2.0.0-beta.17.1

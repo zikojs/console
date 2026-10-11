@@ -1,5 +1,5 @@
 ---
-import Console  from '../components/Console.astro'
+import { Console }  from '@zikojs/astro-console'
 const res = await fetch('https://api.github.com/users/zakarialaoui10')
 const userData = await res.json()
 ---
