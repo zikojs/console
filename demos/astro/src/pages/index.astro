@@ -1,0 +1,35 @@
+---
+import Console  from '../components/Console.astro'
+const res = await fetch('https://api.github.com/users/zakarialaoui10')
+const userData = await res.json()
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+		<Console 
+			methode = 'table'
+			items={['kk', 'll', 'lll']}
+		/>
+		<Console 
+			methode = 'warn'
+			items={['kk', 'll', 'lll']}
+		/>
+		<Console 
+			methode = 'log'
+			items={'kkkkddk'}
+		/>
+		<Console 
+			methode = 'log'
+			items={userData}
+		/>
+	</body>
+</html>

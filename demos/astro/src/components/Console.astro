@@ -1,0 +1,40 @@
+---
+interface Props {
+  methode?: 'log' | 'warn' | 'table' | 'error';
+  items?: unknown[] | any;
+}
+
+const { 
+    methode = 'log',
+    items = []
+} = Astro.props;
+
+// Convert the array to a JSON string so it can be safely stored in a data attribute
+const serializedItems = JSON.stringify(items);
+---
+
+<div 
+    data-console-wrapper
+    data-console-methode={methode}
+    data-console-items={serializedItems}
+>
+</div>
+
+<script>
+  import { Console } from '@zikojs/console/no-css';
+
+  const console_wrapper = document.querySelectorAll('[data-console-wrapper]');
+  console_wrapper.forEach((element) => {
+    const htmlElement = element as HTMLElement;
+    const method = (htmlElement.dataset.consoleMethode ?? 'log') as keyof typeof Console;
+
+    const rawData = htmlElement.dataset.consoleItems;
+    const _items = rawData ? JSON.parse(rawData) : [];
+
+    Console[method](_items).mount(element);
+  });
+</script>
+
+<style is:global>
+    @import '@zikojs/console/style';
+</style>
