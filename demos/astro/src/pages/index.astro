@@ -15,20 +15,20 @@ const userData = await res.json()
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<Console 
-			methode = 'table'
+		<Console.table
 			items={['kk', 'll', 'lll']}
 		/>
-		<Console 
-			methode = 'warn'
+		<Console.warn
 			items={['kk', 'll', 'lll']}
 		/>
-		<Console 
+		<Console.log
 			methode = 'log'
 			items={'kkkkddk'}
 		/>
-		<Console 
-			methode = 'log'
+		<Console.log
+			items={userData}
+		/>
+		<Console.log 
 			items={userData}
 		/>
 	</body>

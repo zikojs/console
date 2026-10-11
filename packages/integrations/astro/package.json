@@ -1,6 +1,6 @@
 {
   "name": "@zikojs/astro-console",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Console components for Preact applications.",
   "type": "module",
   "main": "src/index.js",
@@ -16,15 +16,7 @@
   },
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "types": "./src/index.d.ts" 
-    },
-    "./no-css": {
-      "import": "./src/main.js",
-      "types": "./src/index.d.ts" 
-    },
-    "./style": {
-      "import": "./src/index.css"
+      "import": "./src/index.ts"
     }
   },
   "repository": {
