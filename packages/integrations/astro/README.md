@@ -1,14 +1,14 @@
 # @zikojs/astro-console
 
-A console-like UI component for **Preact** that renders JavaScript console output directly inside your application.
+A console-like UI component for **Astro** that renders JavaScript console output directly inside your application.
 
 
-`@zikojs/astro-console` provides component that mimic common browser console methods such as `console.log()`, `console.warn()`, and `console.table()` while rendering the output as part of the Preact UI.
+`@zikojs/astro-console` provides component that mimic common browser console methods such as `console.log()`, `console.warn()`, and `console.table()` while rendering the output as part of the Astro UI.
 
 ## ✨ Features
 
 * 🖥️ Console-like output rendered directly in the DOM
-* ⚛️ Designed for Preact and JSX
+* ⚛️ Designed for Astro
 * 🔍 Supports JavaScript objects and arrays
 * 📋 Table-style rendering for structured data
 * ⚠️ Dedicated warning output
@@ -223,7 +223,7 @@ as a component inside the notebook output area instead of writing to the browser
 Related packages include:
 
 * `ziko` : ZikoJS core
-* `@zikojs/astro` : ZikoJS ↔ Preact integration
+* `@zikojs/astro` : ZikoJS ↔ Astro integration
 * `@zikojs/console` : framework-independent ZikoJS 
 
 ZikoJS itself is organized as a modular ecosystem with integrations for multiple UI frameworks.
