@@ -1,6 +1,6 @@
 {
   "name": "@zikojs/astro-console",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Console components for Astro applications.",
   "type": "module",
   "main": "src/index.js",

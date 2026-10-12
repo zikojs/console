@@ -22,5 +22,5 @@ tags.section(
   ),
   Console.warn('KKK'),
   Console.error(new Error('jjj')),
-  Console.log(window),
+  Console.table(window),
 ).mount(document.body)

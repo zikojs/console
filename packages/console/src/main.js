@@ -97,7 +97,9 @@ const Table = (tableData) => {
 
   const hasPrimitiveValues = tableRows.some(([, rowItem]) => !isObj(rowItem));
 
-  return table(
+  return div(
+  { class: "cf-table-wrapper" },
+  table(
     { class: "cf-table" },
     thead(
       tr(
@@ -110,12 +112,21 @@ const Table = (tableData) => {
       ...tableRows.map(([rowIndex, rowItem]) =>
         tr(
           td(rowIndex),
-          ...tableColumns.map((columnName) => td(isObj(rowItem) && columnName in rowItem ? short(rowItem[columnName]) : "")),
-          hasPrimitiveValues ? td(isObj(rowItem) ? "" : prim(rowItem)) : "",
+          ...tableColumns.map((columnName) =>
+            td(
+              isObj(rowItem) && columnName in rowItem
+                ? short(rowItem[columnName])
+                : "",
+            ),
+          ),
+          hasPrimitiveValues
+            ? td(isObj(rowItem) ? "" : prim(rowItem))
+            : "",
         ),
       ),
     ),
-  );
+  ),
+);
 };
 
 const Row = (method, args) => {
@@ -140,8 +151,8 @@ export const Console = Object.fromEntries(
     method,
     (...args) =>
       div(
-        { class: "cf" },
+        { class: "console-feed", 'data-engine' : 'zikojs' },
         div({ class: "cf-body" }, Row(method === "dir" ? "log" : method, args)),
-      ),
+      ).setAttr({'data-engine' : 'zikojs'}),
   ]),
 );
