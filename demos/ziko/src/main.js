@@ -5,7 +5,7 @@ import {
 import { tags } from 'ziko/dom'
 
 tags.section(
-  Console.log('Hello world', 'llll'),
+  Console.log(new Map([['a', '1'], ['b', '1'], ['c', '1'], ['d', '1']])),
   Console.log('kkk', { a : 1, b: 2}),
   Console.table(
     [

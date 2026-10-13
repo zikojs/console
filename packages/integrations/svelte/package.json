@@ -1,0 +1,49 @@
+{
+  "name": "@zikojs/svelte-console",
+  "version": "0.1.0",
+  "description": "Console components for Svelte applications.",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    },
+    "./no-css": {
+      "import": "./src/main.js",
+      "types": "./src/index.d.ts"
+    },
+    "./style": {
+      "import": "./src/index.css"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikojs/console.git",
+    "directory": "packages/integrations/svelte"
+  },
+  "keywords": [
+    "zikojs",
+    "console",
+    "log",
+    "dev-tools",
+    "svelte"
+  ],
+  "author": "zakaria elalaoui",
+  "license": "MIT",
+  "dependencies": {
+    "@zikojs/console": "workspace:*",
+    "@zikojs/svelte": "^0.3.0",
+    "ziko": "catalog:"
+  }
+}
