@@ -37,194 +37,23 @@ Import the console components into your Svelte application:
 ```svelte
 <script>
   import {
-    ConsoleLog,
-    ConsoleWarn,
-    ConsoleTable
+    Console,
   } from '@zikojs/svelte-console'
 </script>
 
-<ConsoleLog value="Hello World" />
+<Console.log items="Hello World" />
 
-<ConsoleLog value={[1, 2, 3, 4]} />
+<Console.log items={[1, 2, 3, 4]} />
 
-<ConsoleWarn value="This is a warning" />
+<Console.wran items="This is a warning" />
 
-<ConsoleTable
-  value={[
+<Console.table
+  items={[
     { name: 'Alice', score: 95 },
     { name: 'Bob', score: 87 }
   ]}
 />
 ```
-
-> **Note:** The component names and props above assume the integration exports `ConsoleLog`, `ConsoleWarn`, and `ConsoleTable` with a `value` prop. Adapt these names to match the package's actual public API.
-
-## 📝 Console Components
-
-### `ConsoleLog`
-
-Renders standard console output.
-
-```svelte
-<script>
-  import { ConsoleLog } from '@zikojs/svelte-console'
-
-  const message = 'Application started'
-  const numbers = [1, 2, 3, 4]
-
-  const user = {
-    name: 'ZikoJS',
-    version: '2.0.0',
-    type: 'library'
-  }
-</script>
-
-<ConsoleLog value={message} />
-<ConsoleLog value={numbers} />
-<ConsoleLog value={user} />
-```
-
-### `ConsoleWarn`
-
-Renders warning-style console output.
-
-```svelte
-<script>
-  import { ConsoleWarn } from '@zikojs/svelte-console'
-
-  const message = 'This is a warning'
-
-  const details = {
-    code: 'WARN_001',
-    message: 'A configuration value is missing'
-  }
-</script>
-
-<ConsoleWarn value={message} />
-<ConsoleWarn value={details} />
-```
-
-### `ConsoleTable`
-
-Renders structured data using a table-oriented representation.
-
-```svelte
-<script>
-  import { ConsoleTable } from '@zikojs/svelte-console'
-
-  const items = [
-    { name: 'Item 1', value: 10 },
-    { name: 'Item 2', value: 20 },
-    { name: 'Item 3', value: 30 }
-  ]
-</script>
-
-<ConsoleTable value={items} />
-```
-
-Arrays of arrays can also be used:
-
-```svelte
-<script>
-  import { ConsoleTable } from '@zikojs/svelte-console'
-
-  const rows = [
-    ['Item 1', 10],
-    ['Item 2', 20],
-    ['Item 3', 30]
-  ]
-</script>
-
-<ConsoleTable value={rows} />
-```
-
-## 🔍 Inspecting Objects
-
-The integration is intended to display JavaScript values in a console-like format rather than simply converting them to strings.
-
-```svelte
-<script>
-  import { ConsoleLog } from '@zikojs/svelte-console'
-
-  const data = {
-    user: {
-      name: 'John',
-      age: 25
-    },
-    items: [1, 2, 3],
-    active: true
-  }
-</script>
-
-<ConsoleLog value={data} />
-```
-
-This makes the component useful for displaying complex runtime values in interactive applications.
-
-## 🧩 Using Multiple Console Outputs
-
-Console components can be combined naturally inside a Svelte component.
-
-```svelte
-<script>
-  import {
-    ConsoleLog,
-    ConsoleWarn,
-    ConsoleTable
-  } from '@zikojs/svelte-console'
-
-  const numbers = [1, 2, 3]
-
-  const users = [
-    { name: 'Alice', score: 95 },
-    { name: 'Bob', score: 87 }
-  ]
-</script>
-
-<div>
-  <ConsoleLog value="Application started" />
-
-  <ConsoleLog value={numbers} />
-
-  <ConsoleWarn value="Something may require your attention" />
-
-  <ConsoleTable value={users} />
-</div>
-```
-
-## 🎨 Styling
-
-The console is rendered as DOM content and can be styled using CSS.
-
-```css
-.console {
-  font-family: monospace;
-  font-size: 14px;
-}
-```
-
-You can integrate the console into your application's existing styles without requiring a separate theme-management system.
-
-## 🧪 Playground / Notebook Usage
-
-`@zikojs/svelte-console` is particularly useful for interactive environments such as:
-
-* JavaScript playgrounds
-* Code editors
-* Notebooks
-* Documentation websites
-* REPLs
-* Educational applications
-* Developer tools
-* Component demos
-
-For example, a notebook can display the output of:
-
-```js
-console.log(value)
-```
-
-inside its output area instead of writing exclusively to the browser's DevTools console.
 
 ## 🔗 ZikoJS Ecosystem
 
