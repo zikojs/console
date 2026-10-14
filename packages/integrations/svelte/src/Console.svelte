@@ -1,4 +1,5 @@
 <script>
+  import "@zikojs/console/style.css";
   import { ZikoWrapper } from "@zikojs/svelte";
   import { Console as _Console } from "@zikojs/console/no-css";
 
@@ -42,7 +43,3 @@
     items={ZikoConsole({ methode, items: resolvedItems })}
   />
 {/if}
-
-<style>
-  @import "@zikojs/console/style";
-</style>
