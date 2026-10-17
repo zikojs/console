@@ -1,3 +1,4 @@
+
 name: Publish console
 
 on:
@@ -7,6 +8,7 @@ on:
         description: "npm dist-tag (latest, next, beta, ...)"
         required: false
         default: "latest"
+        type: string
   push:
     tags:
       - "v[0-9]*"
@@ -26,19 +28,40 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
+        with:
+          version: 10
 
-      - name: Setup Node.js 22
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
-          cache: "pnpm"
+          node-version: "22.14.0"
+          cache: pnpm
           registry-url: "https://registry.npmjs.org"
+
+      - name: Setup npm CLI
+        run: npm install --global npm@latest
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Publish to npm (prepack runs the build, tests and size budget first)
-        working-directory: npm
-        run: npm stage publish --provenance --access public --tag ${{ github.event.inputs.tag || 'latest' }}
+      - name: Determine npm dist-tag
+        id: dist-tag
+        shell: bash
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          INPUT_TAG: ${{ inputs.tag }}
+          REF_NAME: ${{ github.ref_name }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            TAG="${INPUT_TAG:-latest}"
+          elif [[ "$REF_NAME" == *-* ]]; then
+            TAG="beta"
+          else
+            TAG="latest"
+          fi
+
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Stage package on npm
+        working-directory: packages/console
+        run: npm stage publish --tag "${{ steps.dist-tag.outputs.tag }}"
