@@ -39,6 +39,6 @@ jobs:
 
       - name: Publish to npm (prepack runs the build, tests and size budget first)
         working-directory: npm
-        run: npm publish --provenance --access public --tag ${{ github.event.inputs.tag || 'latest' }}
+        run: npm stage publish --provenance --access public --tag ${{ github.event.inputs.tag || 'latest' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
