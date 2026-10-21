@@ -9,7 +9,7 @@ if [[ ! "$VERSION" =~ ^[0-9]+(\.[0-9]+)*(-[a-zA-Z0-9.-]+)?$ ]]; then
   exit 1
 fi
 
-TAG="notebook-v$VERSION"
+TAG="console-v$VERSION"
 
 # Ensure there are changes to commit
 if [[ -z "$(git status --porcelain)" ]]; then
