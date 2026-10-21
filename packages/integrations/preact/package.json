@@ -1,6 +1,6 @@
 {
   "name": "@zikojs/preact-console",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Console components for Preact applications.",
   "type": "module",
   "main": "src/index.js",

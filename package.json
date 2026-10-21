@@ -14,5 +14,12 @@
   "dependencies": {
     "ziko": "2.0.0-beta.17.1"
   },
-  "packageManager": "pnpm@10.0.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0"
 }
