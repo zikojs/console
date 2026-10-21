@@ -2,7 +2,7 @@
   "name": "@zikojs/console-root",
   "version": "1.0.0",
   "description": "",
-  "private": "true",
+  "private": true,
   "scripts": {
     "dev:demos/ziko": "pnpm --dir demos/ziko dev",
     "dev:demos/preact": "pnpm --dir demos/preact dev"
