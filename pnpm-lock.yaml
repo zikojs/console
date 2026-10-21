@@ -6,12 +6,9 @@ settings:
 
 catalogs:
   default:
-    vite:
-      specifier: ^8.2.1
-      version: 8.3.3
     ziko:
       specifier: latest
-      version: 2.0.0-beta.17.1
+      version: 2.0.0-beta.17.2
 
 importers:
 
@@ -78,7 +75,7 @@ importers:
     dependencies:
       ziko:
         specifier: 'catalog:'
-        version: 2.0.0-beta.17.1
+        version: 2.0.0-beta.17.2
 
   packages/integrations/astro:
     dependencies:
@@ -1599,6 +1596,9 @@ packages:
   ziko@2.0.0-beta.17.1:
     resolution: {integrity: sha512-/oxs9UKEvnMZAvQsHFeZJ9hgpgk01/HmSqW4AF+Y0RxZp9US0MNquG9iP3lHUXoXxcENogeOI0OiweMcg+1yJA==}
 
+  ziko@2.0.0-beta.17.2:
+    resolution: {integrity: sha512-UEk3orR14SjrfS+b9nHeX5a1N6f+BxwSm6gb/580oYUyn8f6bKjJ89D6eomknnLjy4dSNQq+NjSEkjVk9KdlSg==}
+
   zimmerframe@1.1.5:
     resolution: {integrity: sha512-msJxIvYDYcoNL+PJsu+7qmpDWsYmAxTY+2TNYXXF0hzBzBk0BMecOqDOG/EckUoKCuKwObfbugIl8QpqHDXeFA==}
 
@@ -3057,6 +3057,8 @@ snapshots:
   yocto-queue@1.2.2: {}
 
   ziko@2.0.0-beta.17.1: {}
+
+  ziko@2.0.0-beta.17.2: {}
 
   zimmerframe@1.1.5: {}
 
