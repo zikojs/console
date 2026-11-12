@@ -2,7 +2,7 @@
   "name": "astro",
   "type": "module",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.3.8",
-    "@zikojs/astro-console": "workspace:*"
+    "@zikojs/astro-console": "workspace:*",
+    "astro": "^7.3.8"
   }
 }

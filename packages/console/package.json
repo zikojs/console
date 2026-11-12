@@ -1,6 +1,6 @@
 {
   "name": "@zikojs/console",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Declarative Console components for Zikojs applications.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -13,11 +13,11 @@
   "exports": {
     ".": {
       "import": "./src/index.js",
-      "types": "./src/index.d.ts" 
+      "types": "./src/index.d.ts"
     },
     "./no-css": {
       "import": "./src/main.js",
-      "types": "./src/index.d.ts" 
+      "types": "./src/index.d.ts"
     },
     "./style": {
       "import": "./src/index.css"

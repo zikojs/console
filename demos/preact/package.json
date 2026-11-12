@@ -1,7 +1,7 @@
 {
   "name": "preact",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.29.8",
-    "@zikojs/preact-console":"workspace:*"
+    "@zikojs/preact-console": "workspace:*",
+    "preact": "^10.29.8"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.6",
