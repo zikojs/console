@@ -58,7 +58,7 @@ const Inspect = (value, propertyKey, seenObjects = [], isTopLevel = false) => {
     [isOpen],
   );
 
-  nodeContainer.onClick(() => setIsOpen((oldState) => !oldState));
+  nodeContainer.on('click', () => setIsOpen((oldState) => !oldState));
 
   const previewElement = useDerived(
     (isOpenState) => {
